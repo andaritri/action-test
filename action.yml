@@ -10,11 +10,13 @@ inputs:
 outputs:
   json:
     description: "json response from get request"
+    value: ${{ steps.response.outputs.json }}
 
 runs:
   using: "composite"
   steps:
     - run: python ${{ github.action_path }}/main.py
+      id: response
       env:
         ID: ${{ inputs.id }}
       shell: bash
