@@ -1,0 +1,20 @@
+name: Test Custom Github Action
+author: Andres Ariza  
+description: A simple custom github action using python programming language
+
+inputs:
+  one:
+    description: "One message to print on stdout"
+    required: True
+  second:
+    description: "Second message to print on stdout"
+    required: True
+
+runs:
+  using: "composite"
+  steps:
+    - run: python ${{ github.action_path }}/main.py
+
+branding:
+  icon: "award"
+  color: "blue"
