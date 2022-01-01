@@ -1,11 +1,11 @@
 import os
+import requests
 
 
 def main():
-    one = os.environ.get("ONE")
-    two = os.environ.get("SECOND")
-    print("Show message on the stdout")
-    print(one, two)
+    id = os.environ.get("ID", 1)
+    response = requests.get(f"https://jsonplaceholder.typicode.com/posts/{id}")
+    print(response)
 
     
 if __name__ == "__main__":
