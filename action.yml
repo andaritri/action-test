@@ -16,7 +16,7 @@ runs:
     - run: python ${{ github.action_path }}/main.py
       env:
         ONE: ${{ inputs.one }}
-        TWO: ${{ inputs.second }}
+        SECOND: ${{ inputs.second }}
       shell: bash
 
 branding:
