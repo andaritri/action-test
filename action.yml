@@ -14,7 +14,7 @@ runs:
   using: "composite"
   steps:
     - run: python ${{ github.action_path }}/main.py
-    shell: bash
+      shell: bash
 
 branding:
   icon: "award"
