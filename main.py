@@ -2,8 +2,8 @@ import os
 
 
 def main():
-    one = os.environ.get("INPUT_ONE")
-    two = os.environ.get("INPUT_SECOND")
+    one = os.environ.get("ONE")
+    two = os.environ.get("SECOND")
     print("Show message on the stdout")
     print(one, two)
 
