@@ -20,9 +20,9 @@ runs:
       env:
         ID: ${{ inputs.id }}
       shell: bash
-    - name: Show enviroments variables
-      run: env
-      shell: bash
+    #- name: Show enviroments variables
+    #  run: env
+    #  shell: bash
     - name: Try to access enviroment variable
       run: echo $TEXT
       shell: bash
