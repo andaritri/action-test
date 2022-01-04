@@ -32,7 +32,7 @@ runs:
       run: ls
       shell: bash
     - name: print output variable
-      run: echo "${{ steps.variables.outputs.ENV }}"
+      run: echo "Show -> ${{ steps.set.outputs.SHOW }}"
       shell: bash
 
 
