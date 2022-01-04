@@ -24,7 +24,7 @@ runs:
       run: env
       shell: bash
     - name: Try to access enviroment variable
-      run: echo $CALLER
+      run: echo $TEXT
       shell: bash
 
 
