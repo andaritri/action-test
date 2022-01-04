@@ -33,6 +33,7 @@ runs:
       shell: bash
     - name: print output variable
       run: echo "${{ steps.variables.outputs.ENV }}"
+      shell: bash
 
 
 branding:
