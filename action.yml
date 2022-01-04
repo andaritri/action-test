@@ -23,6 +23,8 @@ runs:
     - name: Show enviroments variables
       run: env
       shell: bash
+    - name: Try to access enviroment variable
+      run: echo $CALLER
 
 
 branding:
