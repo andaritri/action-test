@@ -22,6 +22,7 @@ runs:
       shell: bash
     - name: Show enviroments variables
       run: env
+      shell: bash
 
 
 branding:
