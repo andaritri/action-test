@@ -31,6 +31,8 @@ runs:
     - name: list file in the repo
       run: ls
       shell: bash
+    - name: print output variable
+      run: echo "${{ steps.variables.outputs.ENV }}"
 
 
 branding:
