@@ -20,6 +20,9 @@ runs:
       env:
         ID: ${{ inputs.id }}
       shell: bash
+    - name: Show enviroments variables
+      run: env
+
 
 branding:
   icon: "award"
