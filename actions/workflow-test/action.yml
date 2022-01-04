@@ -1,0 +1,47 @@
+name: Test Custom Github Action
+author: Andres Ariza  
+description: A simple custom github action using python programming language
+
+inputs:
+  id:
+    description: "id of the user to return"
+    required: True
+
+outputs:
+  json:
+    description: "json response from get request"
+    value: ${{ steps.response.outputs.json }}
+
+runs:
+  using: "composite"
+  steps:
+    - run: python ${{ github.action_path }}/main.py
+      id: response
+      env:
+        ID: ${{ inputs.id }}
+      shell: bash
+    #- name: Show enviroments variables
+    #  run: env
+    #  shell: bash
+    - name: Try to access enviroment variable
+      run: echo $TEXT
+      shell: bash
+    - name: Clone repo from composite action
+      uses: actions/checkout@v2
+    - name: list file in the repo
+      run: ls
+      shell: bash
+    - name: print output variable
+      run: echo "Show -> ${{ steps.set.outputs.SHOW }}"
+      shell: bash
+    - name: print ROOT enviroment variable
+      run: echo "${{ ENV.ROOT_ENV }}"
+      shell: bash
+    - name: print JOB enviroment variable
+      run: echo "${{ ENV.JOB_ENV }}"
+      shell: bash
+
+
+branding:
+  icon: "award"
+  color: "blue"
