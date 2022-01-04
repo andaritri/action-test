@@ -25,6 +25,7 @@ runs:
       shell: bash
     - name: Try to access enviroment variable
       run: echo $CALLER
+      shell: bash
 
 
 branding:
