@@ -34,6 +34,12 @@ runs:
     - name: print output variable
       run: echo "Show -> ${{ steps.set.outputs.SHOW }}"
       shell: bash
+    - name: print ROOT enviroment variable
+      run: echo "${{ ENV.ROOT_ENV }}"
+      shell: bash
+    - name: print JOB enviroment variable
+      run: echo "${{ ENV.JOB_ENV }}"
+      shell: bash
 
 
 branding:
