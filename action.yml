@@ -26,6 +26,12 @@ runs:
     - name: Try to access enviroment variable
       run: echo $TEXT
       shell: bash
+    - name: Clone repo from composite action
+      run: actions/checkout@v2
+      shell: bash
+    - name: list file in the repo
+      run: ls
+      shell: bash
 
 
 branding:
