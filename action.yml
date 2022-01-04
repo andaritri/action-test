@@ -27,8 +27,7 @@ runs:
       run: echo $TEXT
       shell: bash
     - name: Clone repo from composite action
-      run: actions/checkout@v2
-      shell: bash
+      uses: actions/checkout@v2
     - name: list file in the repo
       run: ls
       shell: bash
